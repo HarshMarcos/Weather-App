@@ -32,64 +32,61 @@ The application consists of :
     Clear error messages after 2-3 seconds.
 
 Tech Stack
-Frontend: React, Tailwind CSS, Recharts
-Backend: Node.js, Express.js
-Database: MongoDB
-API: OpenWeatherMap API
-Authentication: JWT (JSON Web Tokens)
+
+    Frontend: React, Tailwind CSS, Recharts
+    Backend: Node.js, Express.js
+    Database: MongoDB
+    API: OpenWeatherMap API
+    Authentication: JWT (JSON Web Tokens)
 
 Installation Guide
 
-1. Clone the repository
-   git clone https://github.com/your-repo/weather-app.git
-   cd weather-app
+    1. Clone the repository
+       git clone https://github.com/your-repo/weather-app.git
+       cd weather-app
 
-2. Install Dependencies
-   Backend
-   cd server
-   npm install
-   Frontend
-   bash
-   cd client
-   npm install
+    2. Install Dependencies
+       Backend
+       cd server
+       npm install
+       cd client
+       npm install
 
-3. Set Environment Variables
-   Backend (.env)
-   Create a .env file in the /server directory and add the following variables:
+    3. Set Environment Variables
+       Backend (.env)
+       Create a .env file in the /server directory and add the following variables:
+        PORT=3001
+        MONGO_URI=your-mongodb-connection-string
+        JWT_SECRET=your-jwt-secret
+        OPENWEATHER_API_KEY=your-openweathermap-api-key
 
-PORT=3001
-MONGO_URI=your-mongodb-connection-string
-JWT_SECRET=your-jwt-secret
-OPENWEATHER_API_KEY=your-openweathermap-api-key
+        Frontend (.env)
+        Create a .env file in the /client directory and add:
+        REACT_APP_BACKEND_URL=http://localhost:3001
 
-Frontend (.env)
-Create a .env file in the /client directory and add:
-REACT_APP_BACKEND_URL=http://localhost:3001
-
-4. Run the Application
-   Backend
-   cd server
-   npm run dev
-   Frontend
-   cd client
-   npm start
+    4. Run the Application
+       Backend
+       cd server
+       npm run dev
+       cd client
+       npm start
 
 API Endpoints
 
-User Auth
+    User Auth
 
-1.Register User
-POST /api/register
-2.Login User
-POST /api/login
+    1.Register User
+    POST /api/register
+    2.Login User
+    POST /api/login
 
-Weather APIS
+    Weather APIS
 
-1. Get Current Weather for City
-   GET /api/weather/:cityId
+    1. Get Current Weather for City
+       GET /api/weather/:cityId
 
-2. POST /API/cities - Add a new city to track
+    2. POST /API/cities - Add a new city to track
 
-3. GET /API/cities - Retrieve list of tracked cities
+    3. GET /API/cities - Retrieve list of tracked cities
 
-4. DELETE /API/cities/:id - Remove a city from tracking
+    4. DELETE /API/cities/:id - Remove a city from tracking
